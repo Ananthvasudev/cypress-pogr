@@ -62,16 +62,15 @@ describe("Login Flow", () => {
 
   // });
 
-  // it("Login page should have correct placeholder text for all fields",()=>{
-  //     HeaderPage.signIn();
-  //     cy.getPogrElement("login-input-textinput")
-  //       .should("have.attr", "placeholder")
-  //       .and("equal", loginTestData[lang].placeholders.Emai_field);
-  //     cy.getPogrElement("password-textinput")
-  //       .should("have.attr", "placeholder")
-  //       .and("equal", loginTestData[lang].placeholders.Password_field);
-
-  // })
+  it("Login page should have correct placeholder text for all fields", () => {
+    HeaderPage.signIn();
+    cy.getPogrElement("login-input-textinput")
+      .should("have.attr", "placeholder")
+      .and("equal", loginTestData[lang].placeholders.Emai_field);
+    cy.getPogrElement("password-textinput")
+      .should("have.attr", "placeholder")
+      .and("equal", loginTestData[lang].placeholders.Password_field);
+  });
 
   it("Login page should have correct labels for all fields", () => {
     HeaderPage.signIn();
