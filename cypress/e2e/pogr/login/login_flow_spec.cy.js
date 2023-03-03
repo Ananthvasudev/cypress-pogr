@@ -10,57 +10,57 @@ describe("Login Flow", () => {
     cy.wait(500);
   });
 
-  // it('Login - Successful Flow', () => {
-  //     HeaderPage.signIn();
-  //     LoginPage.fillEmail({ email: loginTestData[lang].fields.email });
-  //     LoginPage.fillPassword({ password: loginTestData[lang].fields.password });
-  //     LoginPage.submit();
+  it('Login - Successful Flow', () => {
+      HeaderPage.signIn();
+      LoginPage.fillEmail({ email: loginTestData[lang].fields.email });
+      LoginPage.fillPassword({ password: loginTestData[lang].fields.password });
+      LoginPage.submit();
 
-  //     cy.url().should('eq', `${Cypress.env('BASE_URL')}login`);
+      cy.url().should('eq', `${Cypress.env('BASE_URL')}login`);
 
-  //     cy.getElementByClass({ styleClass: '.VerificationCodeForm_titleRow__5IVKP' })
-  //         .should("contain", loginTestData[lang].text.verify_login);
-  //     cy.getPogrElement('handle-verification-code-reset-anchor-tag')
-  //         .click();
+      cy.getElementByClass({ styleClass: '.VerificationCodeForm_titleRow__5IVKP' })
+          .should("contain", loginTestData[lang].text.verify_login);
+      cy.getPogrElement('handle-verification-code-reset-anchor-tag')
+          .click();
 
-  //     cy.wait(5000);
-  //     cy.getEmailCode().then(
-  //         (response) => {
-  //             let code = response.body && response.body.code && response.body.code.split('');
-  //             if (code) {
-  //                 cy.getElementByClass({ styleClass: '.VerificationCodeInput_input__1ceYF' })
-  //                     .within(() => {
-  //                         // enter the code
-  //                         for (let i = 0; i < code.length; i++) {
-  //                             cy.get('input').eq(i).type(code[i])
-  //                         }
-  //                     })
-  //                 cy.getPogrElement('verification-code-submit-button').click();
-  //                 cy.wait(5000);
-  //                 cy.getElementByClass({ styleClass: '.NavbarItem_itemTitle__m75rt' })
-  //                     .then(($navItems) => {
-  //                         expect($navItems, '4 items').to.have.length(4)
-  //                     });
-  //             }
-  //         }
-  //     )
-  // })
+      cy.wait(5000);
+      cy.getEmailCode().then(
+          (response) => {
+              let code = response.body && response.body.code && response.body.code.split('');
+              if (code) {
+                  cy.getElementByClass({ styleClass: '.VerificationCodeInput_input__1ceYF' })
+                      .within(() => {
+                          // enter the code
+                          for (let i = 0; i < code.length; i++) {
+                              cy.get('input').eq(i).type(code[i])
+                          }
+                      })
+                  cy.getPogrElement('verification-code-submit-button').click();
+                  cy.wait(5000);
+                  cy.getElementByClass({ styleClass: '.NavbarItem_itemTitle__m75rt' })
+                      .then(($navItems) => {
+                          expect($navItems, '4 items').to.have.length(4)
+                      });
+              }
+          }
+      )
+  })
 
-  // it("The user must be redirected to the signup screen when the user click on the 'Create one now link ",()=>{
-  //     HeaderPage.signIn();
-  //     cy.getPogrElement("login-form-register-redirect-link").click()
+  it("The user must be redirected to the signup screen when the user click on the 'Create one now link ",()=>{
+      HeaderPage.signIn();
+      cy.getPogrElement("login-form-register-redirect-link").click()
 
-  //     cy.url().should("include", "register").and("not.include", "login")
-  //     cy.get(".RegisterForm_titleRow__HbnJC").contains(
-  //       loginTestData[lang].text.create_one_now);
+      cy.url().should("include", "register").and("not.include", "login")
+      cy.get(".RegisterForm_titleRow__HbnJC").contains(
+        loginTestData[lang].text.create_one_now);
 
-  //     })
+      })
 
-  // it("Login: Logo must be present on the login page",()=>{
-  //     HeaderPage.signIn();
-  //      cy.get('[src="/_next/static/media/Logo-full-vertical.0b737a23.svg"]').should("be.visible")
+  it("Login: Logo must be present on the login page",()=>{
+      HeaderPage.signIn();
+       cy.get('[src="/_next/static/media/Logo-full-vertical.0b737a23.svg"]').should("be.visible")
 
-  // });
+  });
 
   it("Login page should have correct placeholder text for all fields", () => {
     HeaderPage.signIn();
