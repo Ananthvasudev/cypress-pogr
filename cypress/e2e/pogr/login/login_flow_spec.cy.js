@@ -100,75 +100,75 @@ context("Login:An error message for invalid login ", () => {
     HeaderPage.signIn();
   });
 
-  // it("Login: An error message for login with empty field",()=>{
-  //     cy.wait(5000)
-  //     LoginPage.submit();
-  //     cy.wait(5000)
+  it("Login: An error message for login with empty field",()=>{
+      cy.wait(5000)
+      LoginPage.submit();
+      cy.wait(5000)
 
-  //     cy.getPogrElement("login-form-error-text")
-  //       .should("be.visible")
-  //       .and("contain.text", loginTestData[lang].error.All_empty_fields);
+      cy.getPogrElement("login-form-error-text")
+        .should("be.visible")
+        .and("contain.text", loginTestData[lang].error.All_empty_fields);
 
-  // })
+  })
 
-  // it("Login: An error message for invalid password",()=>{
-  //     LoginPage.fillEmail({email:loginTestData[lang].fields.email})
-  //     LoginPage.fillPassword({
-  //       password: loginTestData[lang].fields.invalid_passord,});
-  //       cy.wait(1000)
-  //       LoginPage.submit();
-  //       cy.wait(5000)
+  it("Login: An error message for invalid password",()=>{
+      LoginPage.fillEmail({email:loginTestData[lang].fields.email})
+      LoginPage.fillPassword({
+        password: loginTestData[lang].fields.invalid_passord,});
+        cy.wait(1000)
+        LoginPage.submit();
+        cy.wait(5000)
 
-  //       cy.getPogrElement("login-form-error-text")
-  //         .should("be.visible")
-  //         .and("contain.text", loginTestData[lang].error.Incorrect_password);
-  // })
+        cy.getPogrElement("login-form-error-text")
+          .should("be.visible")
+          .and("contain.text", loginTestData[lang].error.Incorrect_password);
+  })
 
-  // it("Login: An error message for invalid email id",()=>{
-  //     LoginPage.fillEmail({
-  //       email: loginTestData[lang].fields.incorrect_email});
-  //     LoginPage.fillPassword({password:loginTestData[lang].fields.password})
-  //     LoginPage.submit()
-  //     cy.wait(5000)
+  it("Login: An error message for invalid email id",()=>{
+      LoginPage.fillEmail({
+        email: loginTestData[lang].fields.incorrect_email});
+      LoginPage.fillPassword({password:loginTestData[lang].fields.password})
+      LoginPage.submit()
+      cy.wait(5000)
 
-  //     cy.getPogrElement("login-form-error-text")
-  //         .should("be.visible")
-  //         .and("contain.text", loginTestData[lang].error.Incorrect_Email);
-  // })
+      cy.getPogrElement("login-form-error-text")
+          .should("be.visible")
+          .and("contain.text", loginTestData[lang].error.Incorrect_Email);
+  })
 
-  // it("Login: An error message for invalid credentials",()=>{
-  //     LoginPage.fillEmail({
-  //       email: loginTestData[lang].fields.incorrect_email});
-  //     LoginPage.fillPassword({password:loginTestData[lang].fields.password})
-  //     LoginPage.submit()
-  //     cy.wait(5000)
+  it("Login: An error message for invalid credentials",()=>{
+      LoginPage.fillEmail({
+        email: loginTestData[lang].fields.incorrect_email});
+      LoginPage.fillPassword({password:loginTestData[lang].fields.password})
+      LoginPage.submit()
+      cy.wait(5000)
 
-  //     cy.getPogrElement("login-form-error-text")
-  //         .should("be.visible")
-  //         .and("contain.text", loginTestData[lang].error.Incorrect_Email);
-  // })
+      cy.getPogrElement("login-form-error-text")
+          .should("be.visible")
+          .and("contain.text", loginTestData[lang].error.Incorrect_Email);
+  })
 
-  // it("Login: An error message for incorrect email id",()=>{
-  //     LoginPage.fillEmail({
-  //       email: loginTestData[lang].fields.invalid_email});
-  //     LoginPage.fillPassword({password:loginTestData[lang].fields.password})
-  //     LoginPage.submit()
-  //     cy.wait(5000)
+  it("Login: An error message for incorrect email id",()=>{
+      LoginPage.fillEmail({
+        email: loginTestData[lang].fields.invalid_email});
+      LoginPage.fillPassword({password:loginTestData[lang].fields.password})
+      LoginPage.submit()
+      cy.wait(5000)
 
-  //     cy.getPogrElement("login-form-error-text")
-  //         .should("be.visible")
-  //         .and("contain.text", loginTestData[lang].error.Invalid_Email);
-  // })
+      cy.getPogrElement("login-form-error-text")
+          .should("be.visible")
+          .and("contain.text", loginTestData[lang].error.Invalid_Email);
+  })
 
-  // it("should remember the user credentials after logout",()=>{
-  //     LoginPage.fillEmail({email:loginTestData[lang].fields.email})
-  //     LoginPage.fillPassword({password:loginTestData[lang].fields.password})
-  //     // cy.get("#remember-me-checkbox-input").check();
-  //     // cy.get("#remember-me-checkbox-input").should('be.checked')
-  //    LoginPage.checkbox().check()
-  //     LoginPage.checkbox().should("be.checked")
-  //     cy.wait(1000)
-  //     LoginPage.submit();
-  //     cy.wait(5000)
-  // });
+  it("should remember the user credentials after logout",()=>{
+      LoginPage.fillEmail({email:loginTestData[lang].fields.email})
+      LoginPage.fillPassword({password:loginTestData[lang].fields.password})
+      // cy.get("#remember-me-checkbox-input").check();
+      // cy.get("#remember-me-checkbox-input").should('be.checked')
+     LoginPage.checkbox().check()
+      LoginPage.checkbox().should("be.checked")
+      cy.wait(1000)
+      LoginPage.submit();
+      cy.wait(5000)
+  });
 });
