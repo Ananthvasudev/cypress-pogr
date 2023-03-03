@@ -1,0 +1,23 @@
+{
+    "en": {
+        "text": {
+            "get_started": "Get started"
+        },
+        "fields": {
+            "email": "lakshmikant+1100@pogr.io",
+            "password": "Testing123",
+            "confirm_password": "Testing123",
+            "wrong_password": "Testing1234"
+        },
+        "error": {
+            "user_already_registered": "Sorry unable to Register with Current Registration Information",
+            "password_mismatch": "Passwords do not match.",
+            "invalid_reg_info": "Invalid register info",
+            "invalid_value": "Invalid value"
+        },
+        "info": {},
+        "placeholders": {},
+        "labels": {},
+        "warn": {}
+    }
+}

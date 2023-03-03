@@ -1,0 +1,36 @@
+{
+    "en": {
+        "text": {
+            "verify_login": "Verify your login",
+            "create_one_now":"Get started"
+        },
+        "fields": {
+            "email": "lakshmikant+1100@pogr.io",
+            "password": "Testing123",
+            "wrong_password": "Testing1234",
+            "incorrect_email":"test@test.com",
+            "invalid_passord":"anand@123",
+            "invalid_email":"testtes.com"
+            
+        },
+        "error": {
+            "All_empty_fields":"Invalid login info",
+            "Incorrect_password":"Invalid Login Credentials.",
+            "Incorrect_Email":"Incorrect Username/Phone or Email.",
+            "Login with invalid credentials":"Incorrect Username/Phone or Email.",
+            "Invalid_Email":"Invalid login info"
+        },
+        "info": {},
+        "placeholders": {
+
+            "Emai_field":"Email, phone, or username.",
+            "Password_field":"Password..."
+
+        },
+        "labels": {
+            "Sign":"Sign in",
+            "Password":"Password"
+        },
+        "warn": {}
+    }
+}

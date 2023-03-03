@@ -1,0 +1,18 @@
+{
+    "en": {
+        "text": {},
+        "fields": {},
+        "error": {
+            "password_mismatch": "Passwords do not match."
+        },
+        "info": {},
+        "placeholders": {},
+        "labels": {},
+        "warn": {},
+        "notifications": {},
+        "alerts": {},
+        "attribute": {},
+        "identifier": {},
+        "rules": {}
+    }
+}
