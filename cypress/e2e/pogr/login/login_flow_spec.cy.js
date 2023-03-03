@@ -81,14 +81,9 @@ describe("Login Flow", () => {
           loginTestData[lang].labels.Sign
         );
         expect($li.get(1).textContent, "Password label").to.equal(
-          loginTestData[lang].labels.Password
-        );
+    loginTestData[lang].labels.Password + "Forgot password?")
       });
-    //   .and(($li) => {
-    //     expect($li.get(1).textContent, "Password label").to.equal(
-    //       loginTestData[lang].labels.Password
-    //     );
-    //   })
+    
   });
 });
 
